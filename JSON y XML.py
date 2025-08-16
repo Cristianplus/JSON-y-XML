@@ -10,7 +10,7 @@ data = {
 }
 
 xml_file = "cristiandev.xml"
-
+json_file = "cristiandev.json"
 
 """
 Ejercicio
@@ -41,4 +41,15 @@ with open(xml_file) as xml_data:
 
 os.remove(xml_file)
 
+#JSON
 
+def create_json():
+    with open(json_file, "w") as json_data:
+        json.dump(data, json_data)
+
+create_json()
+
+with open(json_file, "r") as json_data:
+    print(json_data.read())
+
+#os.remove(json_file)
